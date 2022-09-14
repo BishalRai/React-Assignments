@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  //define state variable
+  const [age, setAge] = useState(0)
+  const [heartratelimits, setHeartratelimits] = useState(0)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h3>Heart Rate Limits Calculator</h3>
+      <form>
+        <div>
+          <label>Age</label>
+          <input type="number"
+            placeholder="Enter your age here"
+          />
+        </div>
+        <div>
+          <label>Heart Rate Limits</label>
+          <output></output>
+        </div>
+
+        <button type="button"> calculate </button>
+
+      </form>
     </div>
   );
 }
