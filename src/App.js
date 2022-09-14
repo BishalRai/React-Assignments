@@ -6,6 +6,12 @@ function App() {
   const [age, setAge] = useState(0)
   const [heartratelimits, setHeartratelimits] = useState(0)
 
+  function calculate(){
+    const Upper = (220 - age ) * 0.85
+    const Lower = (220 - age) * 0.65
+    setHeartratelimits(<p>{Lower} - {Upper}</p>)
+  }
+
   return (
     <div>
       <h3>Heart Rate Limits Calculator</h3>
